@@ -1,0 +1,83 @@
+.main-panel {
+    margin-top: 0px;
+    width: 100% !important
+}
+.main-panel>.content {
+    margin-top: 0px;
+}
+
+.card [class*="card-header-"] .card-icon, .card [class*="card-header-"] .card-text {
+    padding: 20px;
+}
+
+.zone-letter {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.chart-attendance-attend {
+    stroke: red;
+
+}
+
+.chart-attendance-absent {
+    stroke: #fff;
+}
+
+.badge {
+    padding:10px;
+}
+
+.w-20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding-left: 15px;
+    padding-right:15px;
+  }
+
+.w-20:first-child {
+    padding-left: 0;
+}
+
+.w-20:last-child {
+    padding-right:0
+}
+  
+  @media (min-width: 576px) {
+    .w-sm-20 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .w-md-20 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .w-lg-20 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .w-xl-20 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+  
