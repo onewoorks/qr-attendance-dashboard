@@ -30,7 +30,7 @@
                             <div class="card-icon">
                               <span class='zone-letter'>A</span>
                             </div>
-                            <p class="card-category">Sitting Zone</p>
+                            <p class="card-category">VIP Sitting Zone</p>
                             <h3 class="card-title"><span id="zone_a_present"></span>/<span id="zone_a_total"></span> </h3>
                           </div>
                           <div class="card-footer">
@@ -92,9 +92,9 @@
                       <div class="card card-stats">
                           <div class="card-header card-header-primary card-header-icon">
                             <div class="card-icon">
-                                <span class='zone-letter'>Total</span>
+                                <span class='zone-letter'>E</span>
                             </div>
-                            <p class="card-category">Total Present</p>
+                            <p class="card-category">Sitting Zone</p>
                             <h3 class="card-title"><span id="zone_total_present"></span>/<span id="zone_total_total"></span></h3>
                           </div>
                           <div class="card-footer">
@@ -345,10 +345,10 @@
   <script src="./assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
 
   <script>
+    var sitting_zone = []
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
       md.initDashboardPageCharts();
-
     });
   </script>
   <script>
@@ -397,7 +397,7 @@
       })
     }
 
-      var eventSource = new EventSource("http://localhost:5000/scheduler/stream-test")
+      var eventSource = new EventSource("http://localhost:5000/dashboard/stream-test")
         eventSource.onmessage = function(e) {
           var data_obj = JSON.parse(e.data)
           sitting_zone(data_obj.zone)
