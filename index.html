@@ -9,9 +9,11 @@
   <title>
     Attendance Dashboard
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="./assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
@@ -23,87 +25,91 @@
     <div class="main-panel">
       <div class="content">
         <div class="container-fluid">
-              <div class="d-flex flex-wrap">
-                  <div class="w-20">
-                      <div class="card card-stats">
-                          <div class="card-header card-header-warning card-header-icon">
-                            <div class="card-icon">
-                              <span class='zone-letter'>A</span>
-                            </div>
-                            <p class="card-category">VIP Sitting Zone</p>
-                            <h3 class="card-title"><span id="zone_a_present"></span>/<span id="zone_a_total"></span> </h3>
-                          </div>
-                          <div class="card-footer">
-                            <div class="stats">
-                              <a href="#pablo">View attendance</a>
-                            </div>
-                          </div>
-                        </div>
+          <div class="d-flex flex-wrap">
+            <div class="w-20">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <span class='zone-letter'>A</span>
                   </div>
-                  <div class="w-20">
-                      <div class="card card-stats">
-                          <div class="card-header card-header-success card-header-icon">
-                            <div class="card-icon">
-                                <span class='zone-letter'>B</span>
-                            </div>
-                            <p class="card-category">Sitting Zone</p>
-                            <h3 class="card-title"><span id="zone_b_present"></span>/<span id="zone_b_total"></span></h3>
-                          </div>
-                          <div class="card-footer">
-                            <div class="stats">
-                              View Attendance
-                            </div>
-                          </div>
-                        </div>
+                  <p class="card-category">VIP Sitting Zone</p>
+                  <h3 class="card-title">
+                    <span id="zone_a_present"></span>/<span id="zone_a_total"></span>
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <a href="./sitting-zone.html?zone=a" target="_blank">View Attendance</a>
                   </div>
-                  <div class="w-20">
-                      <div class="card card-stats">
-                          <div class="card-header card-header-danger card-header-icon">
-                            <div class="card-icon">
-                                <span class='zone-letter'>C</span>
-                            </div>
-                            <p class="card-category">Sitting Zone</p>
-                            <h3 class="card-title"><span id="zone_c_present"></span>/<span id="zone_c_total"></span></h3>
-                          </div>
-                          <div class="card-footer">
-                            <div class="stats">
-                              <a href="#">View Attendance</a>
-                            </div>
-                          </div>
-                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-20">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <span class='zone-letter'>B</span>
                   </div>
-                  <div class="w-20">
-                      <div class="card card-stats">
-                          <div class="card-header card-header-info card-header-icon">
-                            <div class="card-icon">
-                                <span class='zone-letter'>D</span>
-                            </div>
-                            <p class="card-category">Sitting Zone</p>
-                            <h3 class="card-title"><span id="zone_d_present"></span>/<span id="zone_d_total"></span></h3>
-                          </div>
-                          <div class="card-footer">
-                            <div class="stats">
-                              <a href="#">View Attendance</a>
-                            </div>
-                          </div>
-                        </div>
+                  <p class="card-category">Sitting Zone</p>
+                  <h3 class="card-title"><span id="zone_b_present"></span>/<span id="zone_b_total"></span></h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                      <a href="./sitting-zone.html?zone=b" target="_blank">View Attendance</a>
                   </div>
-                  <div class="w-20">
-                      <div class="card card-stats">
-                          <div class="card-header card-header-primary card-header-icon">
-                            <div class="card-icon">
-                                <span class='zone-letter'>E</span>
-                            </div>
-                            <p class="card-category">Sitting Zone</p>
-                            <h3 class="card-title"><span id="zone_total_present"></span>/<span id="zone_total_total"></span></h3>
-                          </div>
-                          <div class="card-footer">
-                            <div class="stats">
-                              <a href="#">View Attendance</a>
-                            </div>
-                          </div>
-                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-20">
+              <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                  <div class="card-icon">
+                    <span class='zone-letter'>C</span>
                   </div>
+                  <p class="card-category">Sitting Zone</p>
+                  <h3 class="card-title">
+                    <span id="zone_c_present"></span>/<span id="zone_c_total"></span>
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <a href="./sitting-zone.html?zone=c" target="_blank">View Attendance</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-20">
+              <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                    <span class='zone-letter'>D</span>
+                  </div>
+                  <p class="card-category">Sitting Zone</p>
+                  <h3 class="card-title"><span id="zone_d_present"></span>/<span id="zone_d_total"></span></h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                      <a href="./sitting-zone.html?zone=d" target="_blank">View Attendance</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-20">
+              <div class="card card-stats">
+                <div class="card-header card-header-primary card-header-icon">
+                  <div class="card-icon">
+                    <span class='zone-letter'>E</span>
+                  </div>
+                  <p class="card-category">Sitting Zone</p>
+                  <h3 class="card-title"><span id="zone_e_present"></span>/<span id="zone_e_total"></span></h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                      <a href="./sitting-zone.html?zone=e" target="_blank">View Attendance</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="row d-none">
             <div class="col-1-5 col-sm-6">
@@ -126,7 +132,7 @@
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
-                      <span class='zone-letter'>B</span>
+                    <span class='zone-letter'>B</span>
                   </div>
                   <p class="card-category">Sitting Zone</p>
                   <h3 class="card-title"><span id="zone_b_present"></span>/<span id="zone_b_total"></span></h3>
@@ -142,7 +148,7 @@
               <div class="card card-stats">
                 <div class="card-header card-header-danger card-header-icon">
                   <div class="card-icon">
-                      <span class='zone-letter'>C</span>
+                    <span class='zone-letter'>C</span>
                   </div>
                   <p class="card-category">Sitting Zone</p>
                   <h3 class="card-title"><span id="zone_c_present"></span>/<span id="zone_c_total"></span></h3>
@@ -158,7 +164,7 @@
               <div class="card card-stats">
                 <div class="card-header card-header-info card-header-icon">
                   <div class="card-icon">
-                      <span class='zone-letter'>D</span>
+                    <span class='zone-letter'>D</span>
                   </div>
                   <p class="card-category">Sitting Zone</p>
                   <h3 class="card-title"><span id="zone_d_present"></span>/<span id="zone_d_total"></span></h3>
@@ -171,7 +177,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-lg-6 col-md-12">
               <div class="card">
@@ -191,7 +197,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                         
+
                         </tbody>
                       </table>
                     </div>
@@ -200,33 +206,33 @@
               </div>
             </div>
             <div class="col-lg-6 col-md-12">
-                <div class="row">
-                    <div class="col-md-6">
-                      <div class="card card-chart">
-                        <div class="card-header card-header-success">
-                          <div class="ct-chart" id="dailySalesChart"></div>
-                        </div>
-                        <div class="card-body">
-                          <h4 class="card-title">Attendance Pattern</h4>
-                          <p class="card-category">
-                            <span class="text-success">Time blocked</span></p>
-                        </div>
-                      </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card card-chart">
+                    <div class="card-header card-header-success">
+                      <div class="ct-chart" id="dailySalesChart"></div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="card card-chart">
-                        <div class="card-header card-header-warning">
-                          <div class="ct-chart" id="websiteViewsChart"></div>
-                        </div>
-                        <div class="card-body">
-                          <h4 class="card-title">Reader Counter</h4>
-                          <p class="card-category">Reader Counter Peformance</p>
-                        </div>
-                      </div>
+                    <div class="card-body">
+                      <h4 class="card-title">Attendance Pattern</h4>
+                      <p class="card-category">
+                        <span class="text-success">Time blocked</span></p>
                     </div>
                   </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                      <div class="ct-chart" id="websiteViewsChart"></div>
+                    </div>
+                    <div class="card-body">
+                      <h4 class="card-title">Reader Counter</h4>
+                      <p class="card-category">Reader Counter Peformance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                  
+
               <div class="card">
                 <div class="card-header card-header-warning">
                   <h4 class="card-title">Attendance Event Target</h4>
@@ -255,7 +261,7 @@
                         <td class='text-center'>View</td>
                       </tr>
                       <tr>
-                        <td>201 -  500</td>
+                        <td>201 - 500</td>
                         <td>Not Complete</td>
                         <td class='text-center'>View</td>
                       </tr>
@@ -264,7 +270,7 @@
                 </div>
               </div>
 
-            
+
             </div>
           </div>
         </div>
@@ -300,7 +306,8 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
-            <a rel="noopener noreferrer" href="https://onewoorks-solutions.com" target="_blank">Onewoorks Solutions</a> for a better web.
+            <a rel="noopener noreferrer" href="https://onewoorks-solutions.com" target="_blank">Onewoorks Solutions</a>
+            for a better web.
           </div>
         </div>
       </footer>
@@ -346,15 +353,15 @@
 
   <script>
     var sitting_zone = []
-    $(document).ready(function() {
+    $(document).ready(function () {
       // Javascript method's body can be found in assets/js/demos.js
       md.initDashboardPageCharts();
     });
   </script>
   <script>
-    function badge_color(zone){
+    function badge_color(zone) {
       var color = 'default'
-      switch(zone){
+      switch (zone) {
         case 'A':
           color = 'warning'
           break;
@@ -367,44 +374,49 @@
         case 'D':
           color = 'info'
           break
+        case 'E': 
+          color = 'primary'
+          break
       }
-      return "badge badge-"+color 
+      return "badge badge-" + color
     }
 
-    function attendance_list(data){
+    function attendance_list(data) {
       var latest_attendance = $("#latest_attendance>tbody");
       var total_attendance = $("#latest_attendance>tbody tr").length
       var html = "<tr>"
-          html += "<td style='width:180px;'>"+ data.time +"</td>"
-          html += "<td class='text-left'>"+ data.name +"</td>"
-          html += "<td class='text-center'>"+ data.counter +"</td>"
-          html += "<td class='text-center'><div class='"+ badge_color(data.zone.toUpperCase()) +"'>"+ data.zone.toUpperCase() +"</div></td>"
-          html += "</tr>"
-          if (total_attendance > 9){
-            $('#latest_attendance>tbody tr:last').fadeOut("normal",function(){
-              $(this).remove()
-              latest_attendance.prepend(html)
-            }) 
-          } else {
-            latest_attendance.prepend(html).fadeIn()
-          }
+      html += "<td style='width:180px;'>" + data.attend_time + "</td>"
+      html += "<td class='text-left'>" + data.customer_name + "</td>"
+      html += "<td class='text-center'>" + data.reader_counter + "</td>"
+      html += "<td class='text-center'><div class='" + badge_color(data.sitting_zone.toUpperCase()) + "'>" + data.sitting_zone.toUpperCase() + "</div></td>"
+      html += "</tr>"
+      if (total_attendance > 9) {
+        $('#latest_attendance>tbody tr:last').fadeOut("normal", function () {
+          $(this).remove()
+          latest_attendance.prepend(html)
+        })
+      } else {
+        latest_attendance.prepend(html).fadeIn()
+      }
     }
 
-    function sitting_zone(data){
-      $.each(data, function(k,v){
-        $('#zone_'+k.toLowerCase()+"_present").text(v.present)
-        $('#zone_'+k.toLowerCase()+"_total").text(v.total)
+    function sitting_zone(data) {
+      $.each(data, function (k, v) {
+        $('#zone_' + k.toLowerCase() + "_present").text(v.attend)
+        $('#zone_' + k.toLowerCase() + "_total").text(v.total)
       })
     }
 
-      var eventSource = new EventSource("http://localhost:5000/dashboard/stream-test")
-        eventSource.onmessage = function(e) {
-          var data_obj = JSON.parse(e.data)
-          sitting_zone(data_obj.zone)
-          attendance_list(data_obj.attendance)
-      };
-  
-      </script>
+    var eventSource = new EventSource("http://localhost:5000/dashboard/stream-stat")
+    eventSource.onmessage = function (e) {
+      var data_obj = JSON.parse(e.data)
+      sitting_zone(data_obj.zone)
+      $.each(data_obj.attendance, function(k, v){
+        attendance_list(v)
+      })
+    };
+
+  </script>
 </body>
 
 </html>
