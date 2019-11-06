@@ -407,7 +407,7 @@
       })
     }
 
-    var eventSource = new EventSource("http://localhost:5000/dashboard/stream-stat")
+    var eventSource = new EventSource("https://nsummit2-qrattendance.onewoorks-solutions.com/dashboard/stream-stat")
     eventSource.onmessage = function (e) {
       var data_obj = JSON.parse(e.data)
       sitting_zone(data_obj.zone)

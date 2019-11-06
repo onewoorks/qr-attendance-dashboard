@@ -28,10 +28,10 @@
 
           <div class="row">
 
-            <div class="col-lg-9 col-md-9">
+            <div class="col-lg-12 col-md-12">
               <div class="card">
-                <div class="card-header card-header-tabs card-header-primary">
-                  <div class="card-title">Latest Attendee</div>
+                <div id='attendee-header' class="card-header">
+                  <div class="card-title">ATTENDANCE LIST</div>
                 </div>
                 <div class="card-body">
                   <div class="tab-content">
@@ -39,10 +39,11 @@
                       <table id='latest_attendance' class="table" aria-describedby="latest attendance">
                         <thead>
                           <tr>
-                            <th scope="col">Timestamp</th>
+                            <th scope="col">No.</th>
+                            <th scope="col">Clock In</th>
                             <th scope="col" class='text-left'>Participant Name</th>
                             <th scope="col" class='text-center'>Register Counter</th>
-                            <th scope="col" class='text-center'>Sitting Zone</th>
+                            <th scope="col" class='text-center'>QR Code</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -55,63 +56,63 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-3">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="card card-chart">
-                      <div class="card-header card-header-success">
-                        <div class="ct-chart" id="dailySalesChart"></div>
-                      </div>
-                      <div class="card-body">
-                        <h4 class="card-title">Attendance Pattern</h4>
-                        <p class="card-category">
-                          <span class="text-success">Time blocked</span></p>
-                      </div>
+            <div class="col-lg-3 col-md-3 d-none">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card card-chart">
+                    <div class="card-header card-header-success">
+                      <div class="ct-chart" id="dailySalesChart"></div>
+                    </div>
+                    <div class="card-body">
+                      <h4 class="card-title">Attendance Pattern</h4>
+                      <p class="card-category">
+                        <span class="text-success">Time blocked</span></p>
                     </div>
                   </div>
                 </div>
-  
-  
-                <div class="card">
-                  <div class="card-header card-header-warning">
-                    <h4 class="card-title">Attendance Event Target</h4>
-                  </div>
-                  <div class="card-body table-responsive">
-                    <table class="table table-hover" aria-describedby="Attendance Objective">
-                      <thead class="text-warning">
-                        <th scope="col">Target</th>
-                        <th scope="col">Status</th>
-                        <th scope="col" class='text-center'>Action</th>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>First 1-50</td>
-                          <td>Not Complete</td>
-                          <td class='text-center'>View</td>
-                        </tr>
-                        <tr>
-                          <td>51 - 100</td>
-                          <td>Not Complete</td>
-                          <td class='text-center'>View</td>
-                        </tr>
-                        <tr>
-                          <td>101 - 200</td>
-                          <td>Not Complete</td>
-                          <td class='text-center'>View</td>
-                        </tr>
-                        <tr>
-                          <td>201 - 500</td>
-                          <td>Not Complete</td>
-                          <td class='text-center'>View</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+              </div>
+
+
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title">Attendance Event Target</h4>
                 </div>
-  
-  
-          </div>
-            
+                <div class="card-body table-responsive">
+                  <table class="table table-hover" aria-describedby="Attendance Objective">
+                    <thead class="text-warning">
+                      <th scope="col">Target</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" class='text-center'>Action</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>First 1-50</td>
+                        <td>Not Complete</td>
+                        <td class='text-center'>View</td>
+                      </tr>
+                      <tr>
+                        <td>51 - 100</td>
+                        <td>Not Complete</td>
+                        <td class='text-center'>View</td>
+                      </tr>
+                      <tr>
+                        <td>101 - 200</td>
+                        <td>Not Complete</td>
+                        <td class='text-center'>View</td>
+                      </tr>
+                      <tr>
+                        <td>201 - 500</td>
+                        <td>Not Complete</td>
+                        <td class='text-center'>View</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+
+            </div>
+
           </div>
         </div>
       </div>
@@ -195,10 +196,61 @@
     var sitting_zone = []
     $(document).ready(function () {
       // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
+      //md.initDashboardPageCharts();
     });
     var url_param = location.search.split('zone=')[1]
     $('title').text('Sitting Zone ' + url_param.toUpperCase())
+    var header_color = ""
+    switch(url_param.toUpperCase()){
+      case 'A':
+        header_color = 'warning'
+        break
+      case 'B': 
+        header_color = 'success'
+        break
+      case 'C': 
+        header_color = "danger"
+        break
+      case 'D': 
+        header_color = "info"
+        break
+      case "E": 
+        header_color = 'primary'
+        break
+    }
+    console.log(header_color)
+    $('#attendee-header').addClass('card-header-'+header_color)
+
+    //var eventSource = new EventSource("http://localhost:5000/dashboard/sitting-zone/"+url_param.toUpperCase())
+    //eventSource.onmessage = function (e) {
+    //  var data_obj = JSON.parse(e.data)
+    //  console.log(data_obj)
+    //sitting_zone(data_obj.zone)
+    //$.each(data_obj.attendance, function(k, v){
+    //  attendance_list(v)
+    //})
+    //};
+
+    $.ajax({
+      url: 'https://nsummit2-qrattendance.onewoorks-solutions.com/dashboard/sitting-zone/' + url_param.toUpperCase(),
+      success: function (response) {
+        render_table(response.sitting_zone_list)
+      }
+    })
+
+    function render_table(payloads) {
+      var html = ""
+      $.each(payloads, function (k, v) {
+        html += "<tr>"
+        html += "<td>"+(k+1)+"</td>"
+        html += `<td>${v.clock_in}</td>`
+        html += `<td>${v.customer_name}</td>`
+        html += `<td class='text-center'>${v.reader_counter}</td>`
+        html += `<td class='text-center'>${v.qr_code}</td>`
+        html += "</tr>"
+      })
+      $('#latest_attendance tbody').append(html)
+    }
   </script>
 
 </body>
